@@ -38,13 +38,13 @@ include_once "rifas.php";
 <label for="rifas" style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">Escolha a sua rifa:</label>
 <br>
 <?php 
-foreach($rifas){
-    $rifas++
+foreach ($rifas as &$nome) {
+  echo "{$nome}";
 ?>
 <select id="rifas" name="rifas" style="margin-top: 20px; margin-bottom: 20px">
-  <option value="<?php echo $rifas; ?>"><?php echo $rifas; ?></option>
+  <option value="<?php echo $nome; ?>"><?php echo $nome; ?></option>
 </select>
-<?php
+<?php 
 }
 ?>
 <br>
