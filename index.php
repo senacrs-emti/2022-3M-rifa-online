@@ -32,7 +32,7 @@
 <label for="rifas" style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">ESCOLHA SUA RIFA:</label>
 <br>
 
-<form action="pagina-rifa.php">
+<form action="cadastro.php">
   <select id="rifas" name="rifas" style="margin-top: 20px; margin-bottom: 20px">
     <option value="pascoa">PÁSCOA</option>
     <option value="maes">DIA DAS MÃES</option>

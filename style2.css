@@ -2,30 +2,12 @@ body{
     background-color: blueviolet;
 }
 
-header{
+form{
     display: block;
-}
-
-#logo{
-    float: left;
-}
-
-#perfil{
-    float: right;
-    margin-top: 20px;
-    margin-right: 20px;
-}
-
-#bloco-home{
-    text-align: center;
-    display: block;
-    float: left;
-    margin-left: 10%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 80%;
     height: fit-content;
+    width: fit-content;
     background-color: purple;
+    padding: 20px;
+    margin: auto;
     border-radius: 25px;
 }
