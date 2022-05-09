@@ -1,0 +1,11 @@
+.menu { 
+    background-color: rgb(246, 246, 246);
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    width: 20%;
+    padding: 20px 20px;
+}
+
+.content {
+    text-align: center;
+}
