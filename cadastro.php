@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <form action="pagina-rifa">
+  <form action="pagina-rifa.php">
     <h3 style="font-family: Arial, Helvetica, sans-serif; color: white; text-align: center; margin-top: -5px"><b>CADASTRE-SE</b></h3>
     <div style="float: left; margin-right: 20px; color: white; font-family: Arial, Helvetica, sans-serif;">
       <label for="nome">Nome:</label>
@@ -40,7 +40,7 @@
     <br>
     <br>
     <div style="color: white; font-family: Arial, Helvetica, sans-serif;">
-      <input type="submit" value="CADASTRAR" style="font-size: 16px; font-weight: bold; color: white; background-color: blueviolet; border: 1px solid purple; padding: 7px; border-radius: 8px">
+      <input type="submit" value="CADASTRAR" style="cursor: pointer; font-size: 16px; font-weight: bold; color: white; background-color: blueviolet; border: 1px solid purple; padding: 7px; border-radius: 8px">
     </div>
     <div style="color: white; font-family: Arial, Helvetica, sans-serif;">
       <a href="login.php" style="float: right; margin-top: -25px;">Já tem cadastro?</a>

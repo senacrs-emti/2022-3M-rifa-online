@@ -20,8 +20,10 @@
       <input type="password" name="senha">
     </div>
     <br>
-    <div style="color: white; font-family: Arial, Helvetica, sans-serif;">
-      <input type="submit" value="LOGAR" style="font-size: 16px; font-weight: bold; color: white; background-color: blueviolet; border: 1px solid purple; padding: 7px; border-radius: 8px">
+    <div style="color: white; font-family: Arial, Helvetica, sans-serif; float: left;">
+      <input type="submit" value="LOGAR" style="cursor: pointer; font-size: 16px; font-weight: bold; color: white; background-color: blueviolet; border: 1px solid purple; padding: 7px; border-radius: 8px">
     </div>
+    <a href="cadastro.php" style="font-family: Arial, Helvetica, sans-serif; margin-left: 70px;">Criar conta</a>
   </form>
+
 </body>
