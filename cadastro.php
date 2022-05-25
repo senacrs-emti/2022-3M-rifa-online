@@ -8,8 +8,18 @@
     <title>Xherom Rifas</title>
 </head>
 
+<header>
+
+<div id="logo">
+<a href="index.php">
+<img src="https://megarifaonline.com.br/wp-content/uploads/2020/11/logotipo_mega_rifa_site.png" style="height: 80px; margin-left: 20px;">
+</a>
+</div>
+
+</header>
+
 <body>
-  <form action="pagina-rifa.php">
+  <form action="login.php">
     <h3 style="font-family: Arial, Helvetica, sans-serif; color: white; text-align: center; margin-top: -5px"><b>CADASTRE-SE</b></h3>
     <div style="float: left; margin-right: 20px; color: white; font-family: Arial, Helvetica, sans-serif;">
       <label for="nome">Nome:</label>
