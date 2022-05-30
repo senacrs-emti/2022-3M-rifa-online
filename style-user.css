@@ -1,0 +1,18 @@
+body{
+    background-color: blueviolet;
+}
+
+.menu { 
+    background-color: purple;
+    border-radius: 5px;
+    border: 1px solid purple;
+    width: 20%;
+    height: fit-content;
+    padding: 20px 20px;
+    margin: auto;
+}
+
+.content {
+    text-align: center;
+    height: 400px;
+}

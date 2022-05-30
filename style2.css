@@ -1,0 +1,13 @@
+body{
+    background-color: blueviolet;
+}
+
+form{
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    background-color: purple;
+    padding: 20px;
+    margin: auto;
+    border-radius: 25px;
+}

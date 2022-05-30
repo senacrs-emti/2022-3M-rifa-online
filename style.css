@@ -20,11 +20,17 @@ header{
     text-align: center;
     display: block;
     float: left;
-    margin: auto;
+    margin-left: 10%;
+    margin-top: 30px;
+    margin-bottom: 50px;
     font-family: Arial, Helvetica, sans-serif;
     width: 80%;
     height: fit-content;
     background-color: purple;
     border-radius: 25px;
+}
 
+#rifas{
+    padding: 10px;
+    font-size: 12px;
 }
