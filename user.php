@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style-user.css" >
-    <title> Login </title>
+    <title>Xherom Rifas</title>
 </head>
 
 <header>
@@ -19,7 +19,7 @@
 </header>
 
 <body>
-    <div class="menu">
+    <div class="menu" style="border-radius: 25px;">
         <div class="content">
             <img style="border-radius: 25px;"src="https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia360-4.png" alt="Foto Usuário" width="128" height="128">
             <h1 style="color: white;">Nome Usuário</h1><br>
