@@ -20,7 +20,17 @@
         <td><b>PRÊMIO 2</b></td>
         <td><b>PRÊMIO 3</b></td>
     </tr>
+    <tr>
+        <td><b>Páscoa</b></td>
+        <td><B>Ovo de Chocolate</B></td>
+        <td><b>Barra de Chocolate</b></td>
+        <td><b>Bibs</b></td>
+        <td><b><a href="#">EDITAR</a></b></td>
+        <td><b><a href="#">REMOVER</a></b></td>
+    </tr>
 </table>
+<br>
+<a href="users.php" style="font-family: Arial, Helvetica, sans-serif; display:block; margin-left: 80px; background-color: blueviolet; height: fit-content; width: fit-content; text-decoration: none; color: white; padding: 10px; border-radius: 20px;">USUÁRIOS</a>
 
 </body>
 </html>

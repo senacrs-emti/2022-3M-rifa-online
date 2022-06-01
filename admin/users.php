@@ -21,7 +21,18 @@
         <td><b>EMAIL</b></td>
         <td><b>SENHA</b></td>
     </tr>
+    <tr>
+        <td><b>Thisgo</b></td>
+        <td><B>Thiago</B></td>
+        <td><b>Schiedeck</b></td>
+        <td><b>thiagosds1701@gmail.com/b></td>
+        <td><b>12345</b></td>
+        <td><b><a href="#">EDITAR</a></b></td>
+        <td><b><a href="#">REMOVER</a></b></td>
+    </tr>
 </table>
+<br>
+<a href="rifas.php" style="font-family: Arial, Helvetica, sans-serif; display:block; margin-left: 80px; background-color: blueviolet; height: fit-content; width: fit-content; text-decoration: none; color: white; padding: 10px; border-radius: 20px;">RIFAS</a>
 
 </body>
 </html>
