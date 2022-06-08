@@ -19,7 +19,7 @@
 </header>
 
 <body>
-  <form action="login.php">
+  <form action="rifacomprada.php">
     <h3 style="font-family: Arial, Helvetica, sans-serif; color: white; text-align: center; margin-top: -5px"><b>CADASTRE-SE</b></h3>
     <div style="float: left; margin-right: 20px; color: white; font-family: Arial, Helvetica, sans-serif;">
       <label for="nome">Nome:</label>

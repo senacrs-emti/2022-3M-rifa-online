@@ -20,9 +20,9 @@
 <br>
 <br>
 <body>
-    <h1 style="color: white; font-family: Arial, Helvetica, sans-serif;"><b> PARABÉNS!!! </b></h1>
-    <h3 style="color: white; font-family: Arial, Helvetica, sans-serif;"><b> Sua rifa foi comprada com sucesso :) </b></h3>
-    <p style="color: white; font-family: Arial, Helvetica, sans-serif;">A equipe da Xherom agradece você!!!</p>
-    <a href="index.php" style="text-decoration: none; font-family: Arial, Helvetica, sans-serif; color: white; font-size: 16px; float: left; margin-left: 20px; margin-right: 30px;">Voltar ao início</a>
-    <a href="user.php" style="text-decoration: none; font-family: Arial, Helvetica, sans-serif; color: white; font-size: 16px; margin-right: 30px;">Suas rifas</a>
+    <h1 style="color: white; font-family: Arial, Helvetica, sans-serif; text-align: center;"><b> PARABÉNS!!! </b></h1>
+    <h3 style="color: white; font-family: Arial, Helvetica, sans-serif; text-align: center;"><b> Sua rifa foi comprada com sucesso :) </b></h3>
+    <p style="color: white; font-family: Arial, Helvetica, sans-serif; text-align: center;">A equipe da Xherom agradece você!!!</p>
+    <a href="index.php" style="text-decoration: none; font-family: Arial, Helvetica, sans-serif; color: white; font-size: 16px; float: left; margin-left: 35%; margin-top: 20px;">Voltar ao início</a>
+    <a href="user.php" style="text-decoration: none; font-family: Arial, Helvetica, sans-serif; color: white; font-size: 16px; float: right; margin-right: 35%; margin-top: 20px;">Suas rifas</a>
 </body>
