@@ -1,3 +1,21 @@
+<?php
+
+$rifas = [
+  "DIA DOS NAMORADOS",
+  "DIA DOS PAIS",
+  "ANA"
+];
+
+$premios = [
+  "Cachorro superior",
+  "Cachorro melhor",
+  "Cachorro"
+];
+
+$rifaId = $_GET["rifas"];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,13 +49,19 @@
 <div id="bloco-home">    
 <img src="https://megarifaonline.com.br/wp-content/uploads/2020/11/logotipo_mega_rifa_site.png" style="height: 100px; margin-top: 30px;">
 <br>
-<h1 style="color: white; font-family: Arial, Helvetica, sans-serif; margin-left: 300px; margin-right: 300px; text-align: justify;">Rifa de [...]</h1>
+<h1 style="color: white; font-family: Arial, Helvetica, sans-serif; margin-left: 300px; margin-right: 300px; text-align: justify;">Rifa de <?php echo $rifas[$rifaId] ?></h1>
 <h3 style="color: white; font-family: Arial, Helvetica, sans-serif; margin-left: 300px; margin-right: 300px; text-align: justify;">Prêmios:</h3>
 <br>
 <ul style="list-type: none; color: white; font-family: Arial, Helvetica, sans-serif; font-size: 18px; text-align: justify; margin-left: 26%; margin-bottom: 50px;">
-  <li>1º lugar: Cachorro</li>
-  <li>2º lugar: Outro Cachorro</li>
-  <li>3º lugar: Mais um Cachorro</li>
+  <?php
+    $counter = 1;
+    foreach ($premios as &$premio) {
+    ?>  
+      <li><?php echo $counter?>º lugar: <?php echo $premio?></li>
+    <?php
+    $counter++;
+  }
+  ?>
 </ul>
 <br>
 

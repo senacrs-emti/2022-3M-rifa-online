@@ -1,3 +1,13 @@
+<?php 
+
+$rifas = [
+  "DIA DOS NAMORADOS",
+  "DIA DOS PAIS",
+  "ANA"
+];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,12 +46,19 @@
 <label for="rifas" style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">ESCOLHA SUA RIFA:</label>
 <br>
 
+
+
 <form action="pagina-rifa.php">
   <select id="rifas" name="rifas" style="margin-top: 20px; margin-bottom: 20px">
-    <option value="pascoa">PÁSCOA</option>
-    <option value="maes">DIA DAS MÃES</option>
-    <option value="namorados">DIA DOS NAMORADOS</option>
-    <option value="ana">ANA</option>
+  <?php
+    $counter = 0;
+    foreach ($rifas as &$rifa) {
+    ?>
+      <option value="<?php echo $counter?>"><?php echo $rifa?></option>
+    <?php
+    $counter++;
+  }
+  ?>
   </select>
 <br>
 
