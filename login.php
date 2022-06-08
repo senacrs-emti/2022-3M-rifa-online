@@ -36,5 +36,4 @@
     <br>
     <a href="cadastro.php" style="font-family: Arial, Helvetica, sans-serif; margin-left: 70px;">Criar conta</a>
   </form>
-
 </body>
