@@ -41,7 +41,11 @@ $rifas = [
 <div id="bloco-home">    
 <img src="https://megarifaonline.com.br/wp-content/uploads/2020/11/logotipo_mega_rifa_site.png" style="height: 100px; margin-top: 30px;">
 <br>
-<p style="color: white; font-family: Arial, Helvetica, sans-serif; margin-left: 300px; margin-right: 300px; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida libero ac magna porttitor, a vehicula mi tincidunt. Aliquam consectetur lectus sit amet arcu ornare, vitae fermentum arcu facilisis. Sed mattis eu lectus vitae laoreet. Duis felis nisi, sagittis id lorem sed, fermentum pharetra mauris. Nunc tincidunt non urna eget luctus. Cras et leo consectetur, sollicitudin ex ut, egestas quam. Integer luctus faucibus nulla, ut molestie tellus mattis eget. Donec imperdiet vulputate turpis ut volutpat. Curabitur sed odio volutpat, molestie nisl quis, aliquam metus. Maecenas hendrerit mi sed neque ullamcorper, at sagittis urna ultrices. Etiam sodales lorem at imperdiet tincidunt. Vestibulum dapibus porta lacus eu volutpat. Sed nec ex arcu. Aenean varius enim ac laoreet tincidunt. Cras vestibulum felis sem, ac tincidunt velit bibendum at.</p>
+<p style="color: white; font-family: Arial, Helvetica, sans-serif; margin-left: 300px; margin-right: 300px; text-align: justify;">&nbsp A equipe da Xherom tem o orgulho de lhe disponibilizar as melhores rifas do mercado. Nosso time é formado pelos profissionais mais capacitados e dispostos a oferecerem o melhor suporte a nossos consumidores.</p>
+<p style="color: white; font-family: Arial, Helvetica, sans-serif; margin-left: 300px; margin-right: 300px; text-align: justify;">&nbsp Dê aquele presente que você tanto quer, para aquela pessoa que você tanto ama, ou se presenteie com nossos conjuntos imperdíveis. Qualquer dúvida, contate-nos!!!</p>
+<br>
+<p style="color: white; font-family: Arial, Helvetica, sans-serif; margin-left: 300px; margin-right: 300px; text-align: justify;">Whatsapp: (51) 98484-8484</p>
+<p style="color: white; font-family: Arial, Helvetica, sans-serif; margin-left: 300px; margin-right: 300px; text-align: justify;">Instagram: @xheromrifas</p>
 <br>
 <label for="rifas" style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">ESCOLHA SUA RIFA:</label>
 <br>

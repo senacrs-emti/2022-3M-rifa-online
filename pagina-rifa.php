@@ -63,9 +63,13 @@ $rifaId = $_GET["rifas"];
   }
   ?>
 </ul>
+<p style="color: red; font-family: Arial, Helvetica, sans-serif; margin-left: 300px; margin-right: 300px; text-align: justify;">Número de rifas disponíveis: 500</p>
+<p style="color: green; font-family: Arial, Helvetica, sans-serif; margin-left: 300px; margin-right: 300px; text-align: justify;">Preço: R$ 1,99</p>
 <br>
-
-<a href="cadastro.php" style="text-decoration: none; cursor: pointer; font-weight: bold; color: white; margin-bottom: 100px; padding: 10px; background-color: darkgoldenrod; border-radius: 15px; border: 1px solid darkgoldenrod;"><b>COMPRAR</b></a>
+<label style="color: white;">Digite quantas você deseja comprar:</label>
+<input type style="color: black; font-family: Arial, Helvetica, sans-serif; margin-left: 300px; margin-right: 300px; margin-bottom: 30px; text-align: justify;">
+<br>
+<a href="compra-rifa.php" style="text-decoration: none; cursor: pointer; font-weight: bold; color: white; margin-bottom: 100px; padding: 10px; background-color: darkgoldenrod; border-radius: 15px; border: 1px solid darkgoldenrod;"><b>COMPRAR</b></a>
 <br>
 
 </div>
