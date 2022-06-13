@@ -1,10 +1,17 @@
 <?php 
 
+include_once "db.php";
+
 $rifas = [
   "DIA DOS NAMORADOS",
   "DIA DOS PAIS",
   "ANA"
 ];
+
+$sql = "SELECT * FROM rifas";
+$resultado = mysqli_query($conn, $sql);
+
+
 
 ?>
 
@@ -55,13 +62,16 @@ $rifas = [
 <form action="pagina-rifa.php">
   <select id="rifas" name="rifas" style="margin-top: 20px; margin-bottom: 20px">
   <?php
-    $counter = 0;
-    foreach ($rifas as &$rifa) {
-    ?>
-      <option value="<?php echo $counter?>"><?php echo $rifa?></option>
-    <?php
-    $counter++;
-  }
+    $sql = "SELECT * FROM rifas";
+    $resultado = mysqli_query($conn, $sql);
+
+      if ($resultado) {
+      while ($row = mysqli_fetch_array($resultado)) {
+      ?>
+        <option value="<?php echo $row['id']?>"><?php echo $row['nome']?></option>
+      <?php
+      }
+    }
   ?>
   </select>
 <br>
