@@ -1,5 +1,5 @@
 body{
-    background-color: blueviolet;
+    background-color: #E8F1F2;
 }
 
 header{
@@ -27,6 +27,6 @@ header{
     font-family: Arial, Helvetica, sans-serif;
     width: 80%;
     height: fit-content;
-    background-color: purple;
+    background-color: #a7a5c6;
     border-radius: 25px;
 }

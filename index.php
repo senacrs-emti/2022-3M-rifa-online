@@ -34,7 +34,7 @@ $resultado = mysqli_query($conn, $sql);
 
 <div id="perfil">
 <a href="cadastro.php">
-<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16" href="login.php">
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="black" class="bi bi-person-circle" viewBox="0 0 16 16" href="login.php">
   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
 </svg>
@@ -61,6 +61,7 @@ $resultado = mysqli_query($conn, $sql);
 
 <form action="pagina-rifa.php">
   <select id="rifas" name="rifas" style="margin-top: 20px; margin-bottom: 20px">
+  <option selected disabled="disabled">&nbsp&nbsp-- selecione aqui --</option>
   <?php
     $sql = "SELECT * FROM rifas";
     $resultado = mysqli_query($conn, $sql);
@@ -76,7 +77,7 @@ $resultado = mysqli_query($conn, $sql);
   </select>
 <br>
 
-  <input id="ir" type="submit" value="IR"style="cursor: pointer; font-weight: bold; color: white; margin-bottom: 50px; padding: 10px; background-color: darkgoldenrod; border-radius: 15px; border: 1px solid darkgoldenrod;">
+  <input id="ir" type="submit" value="Entrar"style="cursor: pointer; font-weight: bold; color: white; margin-bottom: 50px; padding: 10px; background-color: black; border-radius: 15px; border: 1px solid black;">
 </form>
 
 </div>

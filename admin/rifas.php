@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Xherom Rifas | Administração</title>
 </head>
 <body>
     
@@ -13,20 +13,30 @@
 <img src="https://megarifaonline.com.br/wp-content/uploads/2020/11/logotipo_mega_rifa_site.png" style="height: 80px; margin-left: 20px;">
 </div>
 
-<table border="5">
+<table border="1" style="font-family: Arial, Helvetica, sans-serif; background-color: purple; width: fit-content; margin: auto; margin-top: 150px;">
     <tr>
-        <td><b>RIFAS</b></td>
-        <td><B>PRÊMIO 1</B></td>
-        <td><b>PRÊMIO 2</b></td>
-        <td><b>PRÊMIO 3</b></td>
+        <td><b>RIFA</b></td>
+        <td><B>DATA DE INÍCIO</B></td>
+        <td><b>DATA DE VENCIMENTO</b></td>
+        <td><b>NÚMEROS DISPONÍVEIS</b></td>
+        <td><b>STATUS</b></td>
+        <td><b>NÚMEROS SORTEADOS</b></td>
     </tr>
     <tr>
         <td><b>Páscoa</b></td>
-        <td><B>Ovo de Chocolate</B></td>
-        <td><b>Barra de Chocolate</b></td>
-        <td><b>Bibs</b></td>
-        <td><b><a href="#">EDITAR</a></b></td>
-        <td><b><a href="#">REMOVER</a></b></td>
+        <td><B>02/04/22</B></td>
+        <td><b>09/04/22</b></td>
+        <td><b>135 - 136 - 137</b></td>
+        <td><b>Encerrada</b></td>
+        <td><b>86 - 54 - 187</b></td>
+    </tr>
+    <tr>
+        <td><b>Dia dos Namorados</b></td>
+        <td><B>01/06/22</B></td>
+        <td><b>12/06/22</b></td>
+        <td><b>84 - 85 - 86</b></td>
+        <td><b>Em andamento</b></td>
+        <td><b>A serem revelados</b></td>
     </tr>
 </table>
 <br>

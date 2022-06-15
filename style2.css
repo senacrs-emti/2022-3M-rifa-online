@@ -1,12 +1,12 @@
 body{
-    background-color: blueviolet;
+    background-color: #E8F1F2;
 }
 
 form{
     display: block;
     height: fit-content;
     width: fit-content;
-    background-color: purple;
+    background-color: #a7a5c6;
     padding: 20px;
     margin: auto;
     border-radius: 25px;
