@@ -19,7 +19,7 @@
 </header>
 
 <body>
-  <form action="rifacomprada.php">
+  <form action="rifas.php">
     <h3 style="font-family: Arial, Helvetica, sans-serif; color: white; text-align: center; margin-top: -5px"><b>ACESSE</b></h3>
     <div style="float: left; margin-right: 20px; margin-bottom: 20px; color: white; font-family: Arial, Helvetica, sans-serif;">
       <label for="email">Email:</label>
@@ -34,6 +34,6 @@
       <input type="submit" value="LOGAR" style="cursor: pointer; font-size: 16px; font-weight: bold; color: white; background-color: blueviolet; border: 1px solid purple; padding: 7px; border-radius: 8px">
     </div>
     <br>
-    <a href="cadastro.php" style="font-family: Arial, Helvetica, sans-serif; margin-left: 70px;">Criar conta</a>
+    <br>
   </form>
 </body>

@@ -22,7 +22,7 @@
                         if ($resultado) {
                         while ($row = mysqli_fetch_array($resultado)) {
                         ?>
-                        <li><a class="dropdown-item" href="pagina-rifa.php?rifa=<?php echo $row['id']?>"><?php echo $row['nome']?></a></li>
+                        <li><a class="dropdown-item" href="rifa.php?rifa=<?php echo $row['id']?>"><?php echo $row['nome']?></a></li>
                         <?php
                         }
                     }
