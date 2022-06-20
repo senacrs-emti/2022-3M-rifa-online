@@ -41,7 +41,7 @@
 =======
 <?php 
 
-include_once "db.php";
+includeonce "db.php";
 
 include_once "includes/head.php";
 
