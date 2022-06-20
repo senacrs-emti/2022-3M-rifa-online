@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,3 +38,36 @@
     <a href="cadastro.php" style="font-family: Arial, Helvetica, sans-serif; margin-left: 70px;">Criar conta</a>
   </form>
 </body>
+=======
+<?php 
+
+include_once "db.php";
+
+include_once "includes/head.php";
+
+?>
+
+<body style="background-color: #1768AC">
+  <div class="container py-4">
+    <?php
+      include_once "includes/navbar.php";
+    ?>
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <form action="processalogin.php" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" value="email" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" value="senha" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+>>>>>>> Stashed changes
