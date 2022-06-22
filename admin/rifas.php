@@ -31,7 +31,7 @@
         <td><b>Encerrada</b></td>
         <td><b>86 - 54 - 187</b></td>
         <td><b>R$1,99</b></td>
-        <td><b><a href="#">EDITAR</a></b></td>
+        <td><b><a href="edita-rifa.php">EDITAR</a></b></td>
         <td><b><a href="#">REMOVER</a></b></td>
     </tr>
     <tr>
@@ -42,7 +42,7 @@
         <td><b>Em andamento</b></td>
         <td><b>A serem revelados</b></td>
         <td><b>R$5000000000</b></td>
-        <td><b><a href="#">EDITAR</a></b></td>
+        <td><b><a href="edita-rifa.php">EDITAR</a></b></td>
         <td><b><a href="#">REMOVER</a></b></td>
     </tr>
 </table>
