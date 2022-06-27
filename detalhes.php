@@ -21,8 +21,15 @@ if ($resultado) {
         $preco = $row['preco'];
         $total = $row['total'];
         $restantes = $row['atual'];
+
         $inicio = $row['inicio'];
+
+        $inicio = substr($inicio, 8, 2)."/".substr($inicio, 5, 2)."/".substr($inicio, 0, 4);
+
         $fim = $row['fim'];
+
+        $fim = substr($fim, 8, 2)."/".substr($fim, 5, 2)."/".substr($fim, 0, 4);
+
         $imagem = $row['imagem'];
 
         $estado = $row['estado'];
@@ -98,7 +105,7 @@ if ($resultado) {
                 <li><strong>Premio</strong>: <?php echo $premio?></li>
                 <li><strong>Números totais</strong>: <?php echo $total?></li>
                 <li><strong>Números restantes</strong>: <?php echo $restantes?></li>
-                <li><strong>Preço</strong>: <?php echo $preco?></li>
+                <li><strong>Preço</strong>: R$ <?php echo $preco?></li>
                 <li><strong>Começou</strong>: <?php echo $inicio?></li>
                 <li><strong>Expira</strong>: <?php echo $fim?></li>
               </ul>

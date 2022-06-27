@@ -118,6 +118,16 @@ if ($result) {
                       while ($row = mysqli_fetch_array($result)) {
                           $data = $row['data'];
                           $premiada = $row['premio'];
+
+                          if ($premiada == 0) {
+                            $premiada = "Não";
+                          }
+
+                          else if ($premiada == 1) {
+                            $premiada == "Sim";
+                          }
+
+
                           $rifaId = $row['rifaid'];
 
                           $sql = "SELECT * FROM rifas WHERE id = '{$rifaId}'";
