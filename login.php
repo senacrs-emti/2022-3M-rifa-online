@@ -1,73 +1,106 @@
-<<<<<<< Updated upstream
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style2.css" rel="stylesheet">
-    <title>Xherom Rifas</title>
-</head>
-
-<header>
-
-<div id="logo">
-<a href="index.php">
-<img src="https://megarifaonline.com.br/wp-content/uploads/2020/11/logotipo_mega_rifa_site.png" style="height: 80px; margin-left: 20px;">
-</a>
-</div>
-
-</header>
-
-<body>
-  <form action="rifacomprada.php">
-    <h3 style="font-family: Arial, Helvetica, sans-serif; color: white; text-align: center; margin-top: -5px"><b>ACESSE</b></h3>
-    <div style="float: left; margin-right: 20px; margin-bottom: 20px; color: white; font-family: Arial, Helvetica, sans-serif;">
-      <label for="email">Email:</label>
-      <input type="text" name="email">
-    </div>
-    <div style="color: white; font-family: Arial, Helvetica, sans-serif;">
-      <label for="senha">Senha:</label>
-      <input type="password" name="senha">
-    </div>
-    <br>
-    <div style="color: white; font-family: Arial, Helvetica, sans-serif; float: left;">
-      <input type="submit" value="LOGAR" style="cursor: pointer; font-size: 16px; font-weight: bold; color: white; background-color: blueviolet; border: 1px solid purple; padding: 7px; border-radius: 8px">
-    </div>
-    <br>
-    <a href="cadastro.php" style="font-family: Arial, Helvetica, sans-serif; margin-left: 70px;">Criar conta</a>
-  </form>
-</body>
-=======
 <?php 
 
-includeonce "db.php";
+session_start();
 
-include_once "includes/head.php";
+include_once "db.php";
 
 ?>
 
-<body style="background-color: #1768AC">
-  <div class="container py-4">
-    <?php
-      include_once "includes/navbar.php";
-    ?>
-    <div class="p-5 mb-4 bg-light rounded-3">
-      <div class="container-fluid py-5">
-        <form action="processalogin.php" method="post" enctype="multipart/form-data">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" value="email" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" value="senha" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Xherom Rifas - As Melhores Rifas do Mercado</title>
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <?php 
+
+  include_once "assets/includes/header.php";
+
+  ?>
+
+  <main id="main">
+
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.php">Home</a></li>
+          <li>Login</li>
+        </ol>
+        <h2>Login</h2>
+
       </div>
-    </div>
-  </div>
+    </section>
+
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Fazer Login</h2>
+          <p> Ainda não tem uma conta? Faça cadastro <a href="registro.php">aqui.</a></p>
+        </div>
+
+        <div class="faq-list">
+          <form action="processa_login.php" method="post" enctype="multipart/form-data">
+            <ul>
+              <li>
+                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i class="fa-solid fa-user" style="margin-left: -25px; margin-right: 5px"></i>Usuário</a>
+                <input required type="text" class="form-control" name="usuario" placeholder="Seu usuário" style="margin-top: 5px">
+              </li>
+
+              <li>
+                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i class="fa-solid fa-unlock" style="margin-left: -25px; margin-right: 5px"></i>Senha</a>
+                <input required type="password" class="form-control" name="senha" placeholder="Sua senha" style="margin-top: 5px">
+                <?php
+                  if(isset($_SESSION['nao_autenticado'])) {
+                  ?>
+                      <div class="alert alert-danger mt-4" role="alert">
+                          Usuário ou senha inválidos!
+                      </div>
+                  <?php
+                  }
+                  unset($_SESSION['nao_autenticado']);
+                ?>
+              </li>
+
+              <li>
+                <button type="submit" class="btn btn-primary" style="background-color: #47b2e4; border: none; padding: 15px">Fazer Login</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <?php
+
+  include_once "assets/includes/footer.php"
+
+  ?>
+
 </body>
+
 </html>
->>>>>>> Stashed changes
