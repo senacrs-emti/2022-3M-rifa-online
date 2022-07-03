@@ -125,7 +125,7 @@ if ($resultado) {
               } 
               
               else if ($estado = "Futura") {
-                $button = "#FFFCCB";
+                $button = "#37517e";
                 $texto = "Futura";
                 $href = "index.php#portfolio";
               }

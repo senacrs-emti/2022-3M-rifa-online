@@ -124,7 +124,7 @@ if ($result) {
                           }
 
                           else if ($premiada == 1) {
-                            $premiada == "Sim";
+                            $premiada = "Sim";
                           }
 
 

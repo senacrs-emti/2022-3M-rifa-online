@@ -29,7 +29,7 @@ include_once "db.php";
 </head>
 
 <body>
-  <main id="main">
+  <main id="main" style="margin-bottom: 180px">
 
   <?php 
 
@@ -51,8 +51,12 @@ include_once "db.php";
 
     <section class="inner-page">
       <div class="container">
+        <h1>
+          Oops. Parece que você cometeu algum engano.
+        </h1>
+
         <p>
-          Oops. Parece que você cometeu algum engano. Volte para a página inicial, por favor.
+          Você será redirecionado para a página principal em alguns instantes.
         </p>
       </div>
     </section>

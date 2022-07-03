@@ -62,14 +62,19 @@
           </li>
           <li><a class="nav-link scrollto" href="http://localhost/solucao/index.php#contact">Contato</a></li>
           <?php
-            if(!isset($_SESSION['usuario'])) {
-              $user = "Login";
-              $href = "login";
-            } 
-
-            else {
+            if(isset($_SESSION['usuario'])) {
               $user = "Painel do Usuário";
               $href = "panel";
+            } 
+
+            else if(isset($_SESSION['admin'])) {
+              $user = "Painel de Administrador";
+              $href = "admin";
+            }
+
+            else {
+              $user = "Login";
+              $href = "login";
             }
 
           ?>
