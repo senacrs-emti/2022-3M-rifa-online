@@ -4,6 +4,8 @@ session_start();
 
 include_once "db.php";
 
+include_once "verifica_admin.php";
+
 if (isset($_GET['acao']) && isset($_GET['id'])) {
     $acao = $_GET['acao'];
     $id = $_GET['id'];
@@ -15,12 +17,6 @@ if ($acao == "removerrifa") {
     mysqli_query($conn, $query);
 }
 
-elseif ($acao == "adicionarrifa") {
-    $query = "INSERT INTO `rifas` (`id`, `nome`, `premio`, `estado`, `preco`, `total`, `atual`, `inicio`, `fim`, `descricao`, `imagem`, `sorteado`) VALUES (NULL, 'dwada', 'dawda', 'dawda', '1.99', '100', '100', '2022-07-06', '2022-07-20', 'dwad', 'dwada', '3');";
-
-    mysqli_query($conn, $query);
-}
-
 elseif ($acao == "removerusuario") {
     $query = "DELETE FROM `usuarios` WHERE `usuarios`.`id` = $id";
 
@@ -28,18 +24,20 @@ elseif ($acao == "removerusuario") {
 }
 
 elseif ($acao == "sortear") {
-    $query = "SELECT * FROM rifas WHERE id = $id";
+    $query = "SELECT * FROM registros WHERE rifaid = $id";
+
+    $numeros = [];
 
     $result = mysqli_query($conn, $query);
     $row = mysqli_num_rows($result);
     
     if ($result) {
       while ($row = mysqli_fetch_array($result)) {
-          $total = $row['total'];
+          array_push($numeros, $row['id']);
       }
     }
 
-    $sorteado = rand(0, $total);
+    $sorteado = $numeros[array_rand($numeros, 1)];
 
     $query = "UPDATE `rifas` SET `sorteado` = '{$sorteado}' WHERE `rifas`.`id` = {$id};";
 

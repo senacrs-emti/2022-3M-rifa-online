@@ -18,10 +18,10 @@
       <div class="col-lg-3 col-md-6 footer-links">
         <h4>Volte Para</h4>
         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="http://localhost/solucao/index.php">Home</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="http://localhost/solucao/index.php#about">Sobre nós</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="http://localhost/solucao/index.php#team">Time</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="http://localhost/solucao/index.php#contact">Contato</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="index.php#about">Sobre nós</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="index.php#team">Time</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="index.php#contact">Contato</a></li>
         </ul>
       </div>
 

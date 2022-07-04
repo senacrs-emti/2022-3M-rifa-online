@@ -144,6 +144,7 @@ if ($result) {
                                 <?php
                               }
                               ?>
+                              <a href="editar_rifa.php?id=<?php echo $id?>">Editar</a>
                               <a style="color: #ff7b7b" href="processa_painel.php?acao=removerrifa&id=<?php echo $id?>">Remover</a>
                             </td>
                           </tr>

@@ -143,7 +143,7 @@ if ($result) {
 
                 selectElement.addEventListener('change', (event) => {
                   const log = document.getElementById('pagar');
-                  log.value = "R$ " + parseInt(event.target.value) * parseFloat(<?php echo $preco?>);
+                  log.value = "R$ " + (parseInt(event.target.value) * parseFloat(<?php echo $preco?>)).toFixed(2);
                 });
               </script>
 

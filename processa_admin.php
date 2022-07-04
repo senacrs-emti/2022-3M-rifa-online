@@ -7,7 +7,7 @@ session_start();
 include_once "db.php";
 
 if (empty($_POST['usuario']) || empty($_POST['senha'])) {
-    header('Location: login.php');
+    header('Location: login_admin.php');
     exit();
 }
 

@@ -19,6 +19,7 @@ $sql = "INSERT INTO `usuarios` (`id`, `usuario`, `senha`, `email`, `numero`) VAL
 mysqli_query($conn, $sql);
 
 $_SESSION['usuario_cadastrado'] = true;
+
 header('Location: login.php');
 
 ?>

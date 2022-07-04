@@ -99,6 +99,7 @@ if ($result) {
                 <table class="table">
                   <thead>
                     <tr>
+                      <th scope="col">Número</th>
                       <th scope="col">Nome da Rifa</th>
                       <th scope="col">Estado</th>
                       <th scope="col">Data</th>
@@ -118,13 +119,16 @@ if ($result) {
                       while ($row = mysqli_fetch_array($result)) {
                           $data = $row['data'];
                           $premiada = $row['premio'];
+                          $id = $row['id'];
 
                           if ($premiada == 0) {
                             $premiada = "Não";
+                            $color = "#ff7b7b";
                           }
 
                           else if ($premiada == 1) {
-                            $premiada = "Sim";
+                            $premiada = "Sim 🤑";
+                            $color = "#B2D2A4";
                           }
 
 
@@ -145,11 +149,12 @@ if ($result) {
 
                           ?>
                           <tr>
+                            <td><?php echo $id?></td>
                             <td><?php echo $nome?></td>
                             <td><?php echo $estado?></td>
                             <td><?php echo $data?></td>
                             <td>R$ <?php echo $preco?></td>
-                            <td><?php echo $premiada?></td>
+                            <td style="color: <?php echo $color?> "><?php echo $premiada?></td>
                           </tr>
                         <?php
                       }

@@ -4,6 +4,8 @@ session_start();
 
 include_once "db.php";
 
+include_once "verifica_login.php";
+
 if (empty($_POST['usuarioid']) || empty($_POST['rifaid'])) {
     header('Location: index.php');
     exit();
@@ -28,6 +30,6 @@ for ($i = 1; $i <= $quantidade; $i++) {
 $query = "UPDATE `rifas` SET `atual` = atual - '{$quantidade}' WHERE rifas.id = $rifaId";
 mysqli_query($conn, $query);
 
-header('Location: index.php');
+header('Location: panel.php');
 
 ?>

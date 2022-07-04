@@ -18,6 +18,34 @@ if ($result) {
   }
 }
 
+if (isset($_GET['id'])) {
+  $rifaId = $_GET['id'];
+} else {
+  header('Location: erro.php');
+}
+
+$sql = "SELECT * FROM rifas WHERE id = $rifaId";
+$resultado = mysqli_query($conn, $sql);
+
+if ($resultado) {
+    while ($row = mysqli_fetch_array($resultado)) {
+        $descricao = $row['descricao'];
+        $nomeRifa = $row['nome'];
+        $premio = $row['premio'];
+        $preco = $row['preco'];
+        $total = $row['total'];
+        $restantes = $row['atual'];
+
+        $inicio = $row['inicio'];
+        $fim = $row['fim'];
+
+        $date = date("Y-m-d");
+
+        $imagem = $row['imagem'];
+        $estado = $row['estado'];
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +99,7 @@ if ($result) {
         </div>
 
         <div class="faq-list">
-          <form action="processa_adicionar.php" method="post" enctype="multipart/form-data">
+          <form action="processa_editar.php" method="post" enctype="multipart/form-data">
             <ul>
               <li>
                 <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i class="fa-solid fa-user" style="margin-left: -25px; margin-right: 5px"></i>Usuário</a>
@@ -80,46 +108,48 @@ if ($result) {
 
               <li>
                 <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i class="fa-solid fa-ticket" style="margin-left: -25px; margin-right: 5px"></i>Nome da Rifa</a>
-                <input required type="text" class="form-control" placeholder="Exemplo: Dia dos Namorados" style="margin-top: 5px" name="nome">
+                <input required type="text" class="form-control" placeholder="Exemplo: Dia dos Namorados" value="<?php echo $nomeRifa ?>" style="margin-top: 5px" name="nome">
+                <input type="hidden" class="form-control" value="<?php echo $rifaId ?>" style="margin-top: 5px" name="id">
               </li>
 
               <li>
                 <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i class="fa-solid fa-info" style="margin-left: -25px; margin-right: 5px"></i>Descrição</a>
-                <input required type="text" class="form-control" placeholder="Exemplo: O melhor presente pro seu amado!" style="margin-top: 5px" name="descricao">
+                <input required type="text" class="form-control" placeholder="Exemplo: O melhor presente pro seu amado!" value="<?php echo $descricao ?>" style="margin-top: 5px" name="descricao">
               </li>
 
               <li>
                 <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i class="fa-solid fa-tags" style="margin-left: -25px; margin-right: 5px"></i>Preço</a>
-                <input required type="number" class="form-control" placeholder="Exemplo: 1.99" style="margin-top: 5px" id="preco" name="preco" step="0.01">
+                <input required type="number" class="form-control" placeholder="Exemplo: 1.99" value="<?php echo $preco ?>" style="margin-top: 5px" id="preco" name="preco" step="0.01">
               </li>
 
               <li>
                 <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i class="fa-solid fa-hashtag" style="margin-left: -25px; margin-right: 5px"></i>Números Totais</a>
-                <input required type="number" class="form-control" placeholder="Exemplo: 1000" style="margin-top: 5px" name="total">
+                <input required type="number" class="form-control" placeholder="Exemplo: 1000" value="<?php echo $total ?>" style="margin-top: 5px" name="total">
+                <input type="hidden" class="form-control" value="<?php echo $restantes ?>" style="margin-top: 5px" name="restantes">
               </li>
 
               <li>
                 <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i class="fa-solid fa-trophy" style="margin-left: -25px; margin-right: 5px"></i>Premio</a>
-                <input required type="text" class="form-control" placeholder="Exemplo: Docinhos" style="margin-top: 5px" name="premio">
+                <input required type="text" class="form-control" placeholder="Exemplo: Docinhos" value="<?php echo $premio ?>" style="margin-top: 5px" name="premio">
               </li>
 
               <li>
                 <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i class="fa-solid fa-image" style="margin-left: -25px; margin-right: 5px"></i>Imagem</a>
-                <input required type="file" class="form-control" style="margin-top: 5px" name="foto">
+                <input type="file" class="form-control" style="margin-top: 5px" name="foto">
               </li>
 
               <li>
                 <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i class="fa-solid fa-calendar" style="margin-left: -25px; margin-right: 5px"></i>Data do Inicio</a>
-                <input required type="date" class="form-control" placeholder="Exemplo: 22-07/2022" style="margin-top: 5px" name="inicio">
+                <input required type="date" class="form-control" placeholder="Exemplo: 22-07/2022" value="<?php echo $inicio ?>" style="margin-top: 5px" name="inicio">
               </li>
 
               <li>
                 <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i class="fa-solid fa-calendar" style="margin-left: -25px; margin-right: 5px"></i>Data do Término</a>
-                <input required type="date" class="form-control" placeholder="Exemplo: 22-07/2022" style="margin-top: 5px" name="fim">
+                <input required type="date" class="form-control" placeholder="Exemplo: 22-07/2022" value="<?php echo $fim ?>" style="margin-top: 5px" name="fim">
               </li>
 
               <li>
-                <button type="submit" class="btn btn-primary" style="background-color: #47b2e4; border: none; padding: 15px">Registrar Rifa</button>
+                <button type="submit" class="btn btn-primary" style="background-color: #47b2e4; border: none; padding: 15px">Editar Rifa</button>
               </li>
             </ul>
           </form>
