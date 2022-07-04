@@ -24,6 +24,14 @@ if ($resultado) {
 
         $inicio = $row['inicio'];
 
+        $date = date("Y-m-d");
+
+        if ($inicio < $date) {
+          $query = "UPDATE `rifas` SET `estado` = 'Ativa' WHERE `rifas`.`id` = $rifaId;";
+
+          mysqli_query($conn, $query);
+        } 
+
         $inicio = substr($inicio, 8, 2)."/".substr($inicio, 5, 2)."/".substr($inicio, 0, 4);
 
         $fim = $row['fim'];
@@ -125,7 +133,7 @@ if ($resultado) {
               } 
               
               else if ($estado = "Futura") {
-                $button = "#FFFCCB";
+                $button = "#37517e";
                 $texto = "Futura";
                 $href = "index.php#portfolio";
               }

@@ -5,9 +5,9 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="http://localhost/solucao/index.php#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="http://localhost/solucao/index.php#about">Sobre Nós</a></li>
-          <li><a class="nav-link scrollto" href="http://localhost/solucao/index.php#team">Time</a></li>
+          <li><a class="nav-link scrollto active" href="index.php#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.php#about">Sobre Nós</a></li>
+          <li><a class="nav-link scrollto" href="index.php#team">Time</a></li>
           <li class="dropdown"><a href="#portfolio"><span>Rifas</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown"><a href="#portfolio"><span>Ativas</span> <i class="bi bi-chevron-right"></i></a>
@@ -60,16 +60,21 @@
               </li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="http://localhost/solucao/index.php#contact">Contato</a></li>
+          <li><a class="nav-link scrollto" href="index.php#contact">Contato</a></li>
           <?php
-            if(!isset($_SESSION['usuario'])) {
-              $user = "Login";
-              $href = "login";
-            } 
-
-            else {
+            if(isset($_SESSION['usuario'])) {
               $user = "Painel do Usuário";
               $href = "panel";
+            } 
+
+            else if(isset($_SESSION['admin'])) {
+              $user = "Painel de Administrador";
+              $href = "admin";
+            }
+
+            else {
+              $user = "Login";
+              $href = "login";
             }
 
           ?>

@@ -66,6 +66,17 @@ include_once "db.php";
               <li>
                 <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i class="fa-solid fa-user" style="margin-left: -25px; margin-right: 5px"></i>Usuário</a>
                 <input required type="text" class="form-control" name="usuario" placeholder="Seu usuário" style="margin-top: 5px">
+                <?php
+                 if(isset($_SESSION['usuario_cadastrado'])) {
+                  ?>
+                      <div class="alert alert-success mt-4" role="alert">
+                          Usuário cadastrado com sucesso!
+                      </div>
+                  <?php
+                  }
+                  
+                  unset($_SESSION['usuario_cadastrado']);
+                ?>
               </li>
 
               <li>
@@ -79,6 +90,7 @@ include_once "db.php";
                       </div>
                   <?php
                   }
+                  
                   unset($_SESSION['nao_autenticado']);
                 ?>
               </li>

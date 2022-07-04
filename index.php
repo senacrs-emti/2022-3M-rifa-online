@@ -4,6 +4,7 @@ session_start();
 
 include_once "db.php";
 
+
 ?>
 
 <!DOCTYPE html>
@@ -93,14 +94,19 @@ include_once "db.php";
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contato</a></li>
           <?php
-            if(!isset($_SESSION['usuario'])) {
-              $user = "Login";
-              $href = "login";
-            } 
-
-            else {
+            if(isset($_SESSION['usuario'])) {
               $user = "Painel do Usuário";
               $href = "panel";
+            } 
+
+            else if(isset($_SESSION['admin'])) {
+              $user = "Painel de Administrador";
+              $href = "admin";
+            }
+
+            else {
+              $user = "Login";
+              $href = "login";
             }
 
           ?>
@@ -253,9 +259,10 @@ include_once "db.php";
         </div>
 
         <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter=".filter-card" class="filter-active">Ativas</li>
-          <li data-filter=".filter-app">Expiradas</li>
-          <li data-filter=".filter-web">Futuras</li>
+          <li data-filter="*" class="filter-active">Todas</li>
+          <li data-filter=".filter-ativa">Ativas</li>
+          <li data-filter=".filter-expirada">Expiradas</li>
+          <li data-filter=".filter-futura">Futuras</li>
         </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
@@ -266,8 +273,8 @@ include_once "db.php";
               if ($resultado) {
               while ($row = mysqli_fetch_array($resultado)) {
               ?>
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                  <div class="portfolio-img"><img src="assets/img/rifas/<?php echo $row['imagem']?>" class="img-fluid" alt=""></div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo strtolower($row['estado'])?>">
+                  <div class="portfolio-img"><img src="assets/img/rifas/<?php echo $row['imagem']?>" class="img-fluid"></div>
                   <div class="portfolio-info">
                     <h4><?php echo $row['nome']?></h4>
                     <p><?php echo $row['descricao']?></p>
